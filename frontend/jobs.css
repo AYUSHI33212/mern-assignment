@@ -1,0 +1,119 @@
+/* ===== Shared form bits ===== */
+textarea {
+  width: 100%;
+  border: 1px solid #d4d1c7;
+  background: #fffdfa;
+  border-radius: 4px;
+  padding: 12px;
+  font: 14px 'DM Sans', sans-serif;
+  resize: vertical;
+}
+label textarea { margin-top: 7px; }
+.hint { font-weight: 400; color: #6b7468; }
+.tiny { font-size: 13px; }
+.button.full { width: 100%; }
+.button:disabled { opacity: .6; cursor: not-allowed; }
+.text-action {
+  background: none; border: 0; padding: 4px 2px; cursor: pointer;
+  font: 600 14px 'DM Sans', sans-serif; color: #a25d32;
+}
+.text-action:hover { text-decoration: underline; }
+.text-action.danger { color: #a72f21; }
+
+/* ===== Recruiter dashboard ===== */
+.recruiter-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+  align-items: start;
+}
+.panel {
+  background: #fffdfa;
+  border: 1px solid #dedbd1;
+  border-radius: 10px;
+  padding: 32px;
+}
+.panel-top { display: flex; justify-content: space-between; align-items: baseline; }
+.panel-title { font-size: 30px; margin: 4px 0 26px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.lead.small { font-size: 18px; margin: -10px 0 22px; }
+
+.job-list { border-top: 1px solid #dedbd1; }
+.job-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+  padding: 18px 0; border-bottom: 1px solid #ece9df;
+}
+.job-row.active { background: #f6f4ec; margin: 0 -12px; padding-left: 12px; padding-right: 12px; }
+.job-row p { margin: 4px 0 0; }
+.row-actions { display: flex; gap: 10px; flex-shrink: 0; }
+
+.submissions { margin-top: 24px; }
+.submissions h3 { font: 500 12px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; color: #a25d32; }
+.applicant-card { border: 1px solid #dedbd1; border-radius: 6px; padding: 14px; margin-bottom: 12px; background: #fff; }
+.applicant-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.applicant-head select { width: auto; padding: 6px 8px; }
+.applicant-head p { margin: 2px 0 0; }
+.cover { background: #f6f4ec; border-radius: 4px; padding: 10px; font-size: 14px; line-height: 1.5; white-space: pre-wrap; }
+
+/* ===== Job cards (applicant browsing) ===== */
+.job-card-link { text-decoration: none; color: inherit; display: block; }
+.job-card-link .job-card { height: 100%; transition: border-color .15s, transform .15s; }
+.job-card-link:hover .job-card { border-color: #234b39; transform: translateY(-2px); }
+.job-card-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.logo { width: 38px; height: 38px; object-fit: contain; border-radius: 6px; border: 1px solid #ece9df; background: #fff; }
+.logo.large { width: 68px; height: 68px; }
+.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.salary { color: #28543c; font-weight: 600; }
+.card-cta { color: #a25d32; font-weight: 600; font-size: 14px; }
+
+/* ===== Job detail ===== */
+.back-link { color: #465044; text-decoration: none; font-weight: 500; font-size: 14px; }
+.detail-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 28px; margin-top: 22px; align-items: start; }
+.detail-main { background: #fffdfa; border: 1px solid #dedbd1; border-radius: 10px; padding: 36px; }
+.detail-header { display: flex; align-items: center; gap: 18px; }
+.detail-header h1 { font-size: 40px; margin: 0; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 26px 0; padding: 18px 0; border-top: 1px solid #ece9df; border-bottom: 1px solid #ece9df; }
+.facts dt { font: 500 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .1em; color: #6b7468; }
+.facts dd { margin: 6px 0 0; font-weight: 600; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.prose { line-height: 1.7; color: #3d463b; white-space: pre-wrap; }
+.apply-box { position: sticky; top: 20px; background: #fffdfa; border: 1px solid #dedbd1; border-radius: 10px; padding: 28px; }
+.apply-box h2 { margin-top: 0; }
+.success { background: #e6eee8; border-radius: 6px; padding: 16px; color: #1f3528; }
+.success p { margin: 6px 0; }
+
+/* ===== Application status chips ===== */
+.status { font: 500 12px 'DM Mono', monospace; padding: 4px 10px; border-radius: 20px; background: #eee; text-transform: capitalize; }
+.status-submitted { background: #e8e6dc; color: #4a4f45; }
+.status-reviewing { background: #fdf0d5; color: #8a5a00; }
+.status-shortlisted { background: #dbeafe; color: #1e4b8f; }
+.status-hired { background: #d6ecdc; color: #1f5a35; }
+.status-rejected { background: #f8dcd8; color: #a72f21; }
+
+/* ===== Profile page ===== */
+.profile-page h1 { font-size: 46px; }
+.profile-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 30px; align-items: start; }
+.avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid #dedbd1; }
+.avatar.initials { display: inline-flex; align-items: center; justify-content: center; background: #e6eee8; color: #234b39; font-weight: 700; font-family: 'DM Sans', sans-serif; }
+.nav-profile { display: inline-flex; align-items: center; gap: 8px; }
+.avatar-row { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; }
+.avatar-row p { margin: 6px 0 0; }
+.file-button { display: inline-block; margin: 0 12px 0 0; padding: 8px 14px; border: 1px solid #234b39; border-radius: 5px; color: #234b39; font-weight: 600; font-size: 14px; cursor: pointer; }
+.file-button:hover { background: #e6eee8; }
+input:disabled { background: #f1efe8; color: #6b7468; cursor: not-allowed; }
+.facts.two { grid-template-columns: 1fr 1fr; margin-top: 8px; }
+.capitalize { text-transform: capitalize; }
+.ok { color: #1f5a35; font-weight: 500; }
+
+@media (max-width: 900px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .recruiter-layout, .detail-layout { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .apply-box { position: static; }
+}
+@media (max-width: 560px) {
+  .two-col { grid-template-columns: 1fr; gap: 0; }
+  .panel, .detail-main { padding: 22px; }
+  .detail-header h1 { font-size: 30px; }
+}
